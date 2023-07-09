@@ -41,3 +41,30 @@ app.use(passport.session())
 
 app.use('/auth', AuthRoute)
 app.use('/profile', ProfileRoute)
+app.use('/ngos', NGORoute)
+
+
+
+const PORT = process.env.PORT || 3000
+
+mongoose.connect(process.env.MONGOURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+}).then(() => {
+
+    console.log("Database Connected")
+
+    app.listen(PORT, () => {
+
+        console.log(`Server Connection Established at ${PORT}`)
+
+    })
+    // NGO.insertMany(ngoData, {ordered: false})
+})
+
+    .catch((error) => {
+
+        console.log(error)
+    })
+
+
