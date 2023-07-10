@@ -61,6 +61,8 @@
 
 https://youtu.be/beQcwDPskQ8
 
+[food4bengal.pdf](https://github.com/ronitblenz/food4bengal/files/12001886/food4bengal.pdf)
+
 
 
 **"Someone's waste is, Someone else"s treasure"** , Let's bridge the gap between the **"50 plate bachh gaye bhaiya, abb kya kare?"** and **"Khaane ke liye paisa nhi hai"**.
