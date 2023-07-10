@@ -12,6 +12,9 @@ import DonationSelection from "./pages/DonationSelection"
 import Signup from "./pages/Signup"
 import FirstPage from "./pages/FirstPage"
 import Profile from "./pages/Profile/Profile"
+import Aadhaar from './pages/AadhaarAuth';
+import { data } from "./pages/AadhaarAuth"
+
 
 import { useState, useEffect, useContext } from "react"
 import axios from "axios"
@@ -102,6 +105,10 @@ const App = () => {
     )
   }
 
+
+  const data = []; // Add your logic to fetch or store Aadhaar data
+
+
   return (
 //     <>
 
@@ -128,6 +135,14 @@ const App = () => {
       <Switch>
         <Route path='/login' exact>
           {!userExist ? <Signup /> : <Redirect to='/' />}
+        </Route>
+
+        <Route path="/aadhaar" exact>
+            {userExist ? (
+              <Aadhaar data={data} />
+            ) : (
+              <Redirect to="/login" />
+            )}
         </Route>
 
         <Route path="/profile" component={Profile}>

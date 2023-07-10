@@ -27,10 +27,12 @@ const BottomNavbar = () => {
           <p className={styles.link_text}>Donate</p>
         </div>
       </Link>
-      <div className={[styles.link, styles.disable].join(" ")}>
+      <Link to="/aadhaar">
+      <div className={styles.link}>
         <GrLocation className={styles.icon} />
-        <p className={styles.link_text}>Hunger Spot</p>
+        <p className={styles.link_text}>Verify</p>
       </div>
+      </Link>
       <Link to="/profile">
         <div className={styles.link}>
           <CgProfile className={styles.icon} />
