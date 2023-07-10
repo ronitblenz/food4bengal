@@ -1,0 +1,19 @@
+version: '3'
+services:
+  f4b-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: ronitblenz/f4b-backend
+    ports:
+      - "8686:8686"
+
+  f4b-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: ronitblenz/f4b-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - f4b-backend
